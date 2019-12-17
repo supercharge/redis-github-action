@@ -1,7 +1,7 @@
 {
   "name": "@supercharge/redis-github-action",
   "description": "Redis server in a GitHub Action",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "author": "Marcus Pöhls <marcus@superchargejs.com>",
   "bugs": {
     "url": "https://github.com/superchargejs/redis-github-action/issues"
@@ -9,14 +9,6 @@
   "dependencies": {
     "@actions/core": "~1.2.0",
     "@actions/exec": "~1.0.2"
-  },
-  "devDependencies": {
-    "eslint": "~6.7.2",
-    "eslint-config-standard": "~14.1.0",
-    "eslint-plugin-import": "~2.19.1",
-    "eslint-plugin-node": "~10.0.0",
-    "eslint-plugin-promise": "~4.2.1",
-    "eslint-plugin-standard": "~4.0.1"
   },
   "engines": {
     "node": ">=8"
@@ -32,12 +24,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/superchargejs/redis-github-action.git"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "list:tests": "lab --assert @hapi/code --dry --verbose",
-    "test": "lab --assert @hapi/code --leaks --coverage --lint --reporter console --output stdout --reporter html --output ./coverage/coverage.html",
-    "test:single": "lab --assert @hapi/code --leaks --lint --id"
   }
 }
