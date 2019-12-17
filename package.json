@@ -1,7 +1,7 @@
 {
   "name": "@supercharge/redis-github-action",
   "description": "Redis server in a GitHub Action",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Marcus Pöhls <marcus@superchargejs.com>",
   "bugs": {
     "url": "https://github.com/superchargejs/redis-github-action/issues"
