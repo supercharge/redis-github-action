@@ -1,0 +1,16 @@
+name: 'Redis Server in GitHub Actions'
+description: 'Start a Redis server (on default port 6379)'
+
+branding:
+  icon: 'database'
+  color: 'red'
+
+inputs:
+  redis-version:
+    description: 'Redis version to use'
+    required: false
+    default: 'latest'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
