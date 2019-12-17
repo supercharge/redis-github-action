@@ -17,9 +17,6 @@
   <br/>
   <br/>
   <p>
-    <a href="https://www.npmjs.com/package/@supercharge/strings"><img src="https://img.shields.io/npm/v/@supercharge/strings.svg" alt="Latest Version"></a>
-  </p>
-  <p>
     <em>Follow <a href="http://twitter.com/marcuspoehls">@marcuspoehls</a> and <a href="http://twitter.com/superchargejs">@superchargejs</a> for updates!</em>
   </p>
 </div>
