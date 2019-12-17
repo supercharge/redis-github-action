@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        redis-version: ["4", "5"]
+        redis-version: [4, 5]
 
     name: Start Redis Server v${{ matrix.redis-version }}
     steps:
