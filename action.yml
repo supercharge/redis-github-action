@@ -12,5 +12,7 @@ inputs:
     default: 'latest'
 
 runs:
-  using: 'node12'
-  main: 'start-redis.js'
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.redis-version }}

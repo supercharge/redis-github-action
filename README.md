@@ -5,7 +5,7 @@
   <br/>
   <br/>
   <p>
-    <h3>Redis GitHub Action</h3>
+    <h3>Redis in GitHub Actions</h3>
   </p>
   <p>
     Start a Redis server in your GitHub Actions.
