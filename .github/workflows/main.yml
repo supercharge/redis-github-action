@@ -1,6 +1,6 @@
 name: Start Redis Server
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   redis-action:
