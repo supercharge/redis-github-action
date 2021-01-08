@@ -5,6 +5,9 @@ on: [push, pull_request]
 jobs:
   redis-action:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        redis-version: []
 
     name: Start Redis Server with latest Redis version
     steps:
@@ -13,3 +16,5 @@ jobs:
 
       - name: Start Redis Server
         uses: ./
+        with:
+          redis-version: ${{ matrix.redis-version }}
