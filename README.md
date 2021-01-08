@@ -48,7 +48,7 @@ jobs:
 
     steps:
     - name: Git checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
@@ -56,7 +56,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.1.0
+      uses: supercharge/redis-github-action@1.2.0
       with:
         redis-version: ${{ matrix.redis-version }}
 
