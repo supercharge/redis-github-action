@@ -14,6 +14,10 @@ inputs:
     description: 'Redis port to expose'
     required: false
     default: 6379
+  redis-container-name:
+    description: 'Name of container to create during build. Normally doesn't matter'
+    required: false
+    default: ${{ github.event.repository.name }}
 
 runs:
   using: 'docker'
@@ -21,3 +25,4 @@ runs:
   args:
     - ${{ inputs.redis-version }}
     - ${{ inputs.redis-port }}
+    - ${{ inputs.redis-container-name }}
