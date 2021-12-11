@@ -59,6 +59,7 @@ jobs:
       uses: supercharge/redis-github-action@1.2.0
       with:
         redis-version: ${{ matrix.redis-version }}
+        # redis-port: 6379  # Optional
 
     - run: npm install
 
