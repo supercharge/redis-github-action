@@ -15,7 +15,7 @@ inputs:
     required: false
     default: 6379
   redis-container-name:
-    description: 'Name of container to create during build. Normally doesn't matter'
+    description: "Name of container to create during build. Normally doesn't matter"
     required: false
     default: ${{ github.event.repository.name }}
 
