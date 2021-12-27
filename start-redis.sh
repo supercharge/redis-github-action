@@ -1,6 +1,7 @@
 #!/bin/sh
 
 REDIS_VERSION=$1
+REDIS_PORT=$2
 
 if [ -z "$REDIS_VERSION" ]; then
   echo "Missing Redis version in the [redis-version] input. Received value: $REDIS_VERSION"
@@ -9,4 +10,4 @@ if [ -z "$REDIS_VERSION" ]; then
 fi
 
 echo "Starting single-node Redis instance"
-docker run --name redis --publish 6379:6379 --detach redis:$REDIS_VERSION
+docker run --name redis --publish $REDIS_PORT:6379 --detach redis:$REDIS_VERSION

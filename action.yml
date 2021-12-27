@@ -10,9 +10,13 @@ inputs:
     description: 'Redis version to use'
     required: false
     default: 'latest'
-
+  redis-port:
+    description: 'Redis port to use and expose'
+    required: false
+    default: 6379
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.redis-version }}
+    - ${{ inputs.redis-port }}

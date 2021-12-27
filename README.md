@@ -56,7 +56,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.2.0
+      uses: supercharge/redis-github-action@1.3.0
       with:
         redis-version: ${{ matrix.redis-version }}
 
@@ -65,6 +65,33 @@ jobs:
     - run: npm test
       env:
         CI: true
+```
+
+
+### Using Redis on a Custom Port
+You can start the Redis instance on a custom port using the `redis-port` input:
+
+```yaml
+name: Run tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+        redis-version: [4, 5, 6]
+
+    steps:
+    - name: Start Redis
+      uses: supercharge/redis-github-action@1.3.0
+      with:
+        redis-version: ${{ matrix.redis-version }}
+        redis-port: 12345
+
+    - name: …
 ```
 
 
