@@ -1,6 +1,12 @@
 # Changelog
 
 
+## [1.3.0](https://github.com/superchargejs/redis-github-action/compare/v1.2.0...v1.3.0) - 2022-12-27
+
+### Added
+- start Redis instance on a custom port
+
+
 ## [1.2.0](https://github.com/superchargejs/redis-github-action/compare/v1.1.0...v1.2.0) - 2021-01-08
 
 ### Added
