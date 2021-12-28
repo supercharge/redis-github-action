@@ -1,5 +1,5 @@
 name: 'Redis Server in GitHub Actions'
-description: 'Start a Redis server (on default port 6379)'
+description: 'Start a Redis server'
 
 branding:
   icon: 'database'
