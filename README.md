@@ -95,6 +95,33 @@ jobs:
 ```
 
 
+### Using a Custom Container Name
+This GitHub Action provides a Redis Docker container. The default container name is `redis`. It can be helpful to customize the container name. For example, when running multiple Redis instances in parallel. You can customize the container name using the `redis-container-name` input:
+
+```yaml
+name: Run tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+        redis-version: [4, 5, 6]
+
+    steps:
+    - name: Start Redis
+      uses: supercharge/redis-github-action@1.3.0
+      with:
+        redis-version: ${{ matrix.redis-version }}
+        redis-container-name: redis-auth-token-cache
+
+    - name: …
+```
+
+
 ## License
 MIT © [Supercharge](https://superchargejs.com)
 
