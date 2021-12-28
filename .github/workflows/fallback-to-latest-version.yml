@@ -1,4 +1,4 @@
-name: Start Redis Server with latest version
+name: Start Redis server with latest version
 
 on: [push, pull_request]
 

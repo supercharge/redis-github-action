@@ -1,4 +1,4 @@
-name: Start Redis server
+name: Start Redis server with custom container name
 
 on: [push, pull_request]
 
@@ -12,9 +12,10 @@ jobs:
     name: Start Redis Server v${{ matrix.redis-version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Start Redis Server
         uses: ./
         with:
           redis-version: ${{ matrix.redis-version }}
+          redis-container-name: redis-auth-token-cache

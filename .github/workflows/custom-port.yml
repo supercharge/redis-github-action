@@ -1,4 +1,4 @@
-name: Start Redis server
+name: Start Redis server on custom port
 
 on: [push, pull_request]
 
@@ -18,3 +18,4 @@ jobs:
         uses: ./
         with:
           redis-version: ${{ matrix.redis-version }}
+          redis-port: 12345
