@@ -1,13 +1,13 @@
 # Changelog
 
 
-## [1.4.0](https://github.com/superchargejs/redis-github-action/compare/v1.3.0...v1.4.0) - 2022-12-xx
+## [1.4.0](https://github.com/superchargejs/redis-github-action/compare/v1.3.0...v1.4.0) - 2021-12-28
 
 ### Added
 - use a custom name for the Redis container: this is helpful when starting multiple Redis instances
 
 
-## [1.3.0](https://github.com/superchargejs/redis-github-action/compare/v1.2.0...v1.3.0) - 2022-12-27
+## [1.3.0](https://github.com/superchargejs/redis-github-action/compare/v1.2.0...v1.3.0) - 2021-12-27
 
 ### Added
 - start Redis instance on a custom port
