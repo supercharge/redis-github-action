@@ -6,6 +6,10 @@ branding:
   color: 'red'
 
 inputs:
+  redis-image:
+    description: 'Redis image to use. Useful if you need to run a custom Redis image'
+    required: false
+    default: 'redis'
   redis-version:
     description: 'Redis version to use'
     required: false
@@ -23,6 +27,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.redis-image }}
     - ${{ inputs.redis-version }}
     - ${{ inputs.redis-port }}
     - ${{ inputs.redis-container-name }}

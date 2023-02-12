@@ -56,7 +56,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.4.0
+      uses: supercharge/redis-github-action@1.5.0
       with:
         redis-version: ${{ matrix.redis-version }}
 
@@ -65,6 +65,33 @@ jobs:
     - run: npm test
       env:
         CI: true
+```
+
+
+### Using a Custom Redis Image
+You can utilize an alternative Redis image using the `redis-image` input:
+
+```yaml
+name: Run tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+        redis-version: [6.2.4-v4, 6.2.6-v3]
+
+    steps:
+    - name: Start Redis
+      uses: supercharge/redis-github-action@1.5.0
+      with:
+        redis-image: redis/redis-stack-server
+        redis-version: ${{ matrix.redis-version }}
+
+    - name: …
 ```
 
 
@@ -86,7 +113,7 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.4.0
+      uses: supercharge/redis-github-action@1.5.0
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-port: 12345
@@ -113,7 +140,7 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.4.0
+      uses: supercharge/redis-github-action@1.5.0
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-container-name: redis-auth-token-cache
