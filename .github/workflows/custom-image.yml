@@ -1,0 +1,21 @@
+name: Start Redis server from a custom image
+
+on: [push, pull_request]
+
+jobs:
+  redis-action:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        redis-version: [6.2.4-v4, 6.2.6-v3]
+
+    name: Start Redis Stack Server v${{ matrix.redis-version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Start Redis Stack Server
+        uses: ./
+        with:
+          redis-image: redis/redis-stack-server
+          redis-version: ${{ matrix.redis-version }}

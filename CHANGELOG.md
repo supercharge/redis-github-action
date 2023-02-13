@@ -1,6 +1,12 @@
 # Changelog
 
 
+## [1.5.0](https://github.com/superchargejs/redis-github-action/compare/v1i.4.0...v1.5.0) - 2023-02-xx
+
+### Added
+- use a custom Redis image: useful if you need to run an alternative Redis image like Redis Stack
+
+
 ## [1.4.0](https://github.com/superchargejs/redis-github-action/compare/v1.3.0...v1.4.0) - 2021-12-28
 
 ### Added
