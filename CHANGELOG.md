@@ -1,25 +1,26 @@
 # Changelog
 
 
-## [1.5.0](https://github.com/superchargejs/redis-github-action/compare/v1i.4.0...v1.5.0) - 2023-02-xx
+## [1.5.0](https://github.com/supercharge/redis-github-action/compare/v1i.4.0...v1.5.0) - 2023-02-14
 
 ### Added
 - use a custom Redis image: useful if you need to run an alternative Redis image like Redis Stack
+  - uses `redis` as the default Docker image
 
 
-## [1.4.0](https://github.com/superchargejs/redis-github-action/compare/v1.3.0...v1.4.0) - 2021-12-28
+## [1.4.0](https://github.com/supercharge/redis-github-action/compare/v1.3.0...v1.4.0) - 2021-12-28
 
 ### Added
 - use a custom name for the Redis container: this is helpful when starting multiple Redis instances
 
 
-## [1.3.0](https://github.com/superchargejs/redis-github-action/compare/v1.2.0...v1.3.0) - 2021-12-27
+## [1.3.0](https://github.com/supercharge/redis-github-action/compare/v1.2.0...v1.3.0) - 2021-12-27
 
 ### Added
 - start Redis instance on a custom port
 
 
-## [1.2.0](https://github.com/superchargejs/redis-github-action/compare/v1.1.0...v1.2.0) - 2021-01-08
+## [1.2.0](https://github.com/supercharge/redis-github-action/compare/v1.1.0...v1.2.0) - 2021-01-08
 
 ### Added
 - version check before starting the Redis container: fall back to `latest` when no Redis version is defined for the workflow
@@ -29,7 +30,7 @@
 - refined wording in Readme
 
 
-## [1.1.0](https://github.com/superchargejs/redis-github-action/compare/v1.0.0...v1.1.0) - 2019-12-18
+## [1.1.0](https://github.com/supercharge/redis-github-action/compare/v1.0.0...v1.1.0) - 2019-12-18
 
 ### Updated
 - switched from a Node.js workflow to a Docker-based workflow
