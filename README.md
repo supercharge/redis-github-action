@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x, 16.x, 18.x]
         redis-version: [4, 5, 6]
 
     steps:
@@ -81,7 +81,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
         redis-version: [6.2.4-v4, 6.2.6-v3]
 
     steps:
@@ -108,7 +107,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
         redis-version: [4, 5, 6]
 
     steps:
@@ -135,7 +133,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
         redis-version: [4, 5, 6]
 
     steps:
