@@ -4,6 +4,7 @@ REDIS_IMAGE=$1
 REDIS_VERSION=$2
 REDIS_PORT=$3
 REDIS_CONTAINER_NAME=$4
+REDIS_REMOVE_CONTAINER=$5
 
 if [ -z "$REDIS_VERSION" ]; then
   echo "Missing Redis version in the [redis-version] input. Received value: $REDIS_VERSION"
@@ -11,5 +12,11 @@ if [ -z "$REDIS_VERSION" ]; then
   REDIS_VERSION='latest'
 fi
 
-echo "Starting single-node Redis instance"
-docker run --name $REDIS_CONTAINER_NAME --publish $REDIS_PORT:6379 --detach $REDIS_IMAGE:$REDIS_VERSION
+DOCKER_RUN_ARGS="--name $REDIS_CONTAINER_NAME --publish $REDIS_PORT:6379 --detach $REDIS_IMAGE:$REDIS_VERSION"
+
+if [ "$REDIS_REMOVE_CONTAINER" == "true" ] ; then
+  DOCKER_RUN_ARGS+=" --rm"
+fi
+
+echo "Starting single-node Redis instance: $DOCKER_RUN_ARGS"
+docker run $DOCKER_RUN_ARGS
