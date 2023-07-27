@@ -43,8 +43,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
-        redis-version: [4, 5, 6]
+        node-version: [18.x, 20.x]
+        redis-version: [6, 7]
 
     steps:
     - name: Git checkout
@@ -56,7 +56,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.5.0
+      uses: supercharge/redis-github-action@1.6.0
       with:
         redis-version: ${{ matrix.redis-version }}
 
@@ -85,7 +85,7 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.5.0
+      uses: supercharge/redis-github-action@1.6.0
       with:
         redis-image: redis/redis-stack-server
         redis-version: ${{ matrix.redis-version }}
@@ -107,11 +107,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        redis-version: [4, 5, 6]
+        redis-version: [6, 7]
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.5.0
+      uses: supercharge/redis-github-action@1.6.0
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-port: 12345
@@ -133,11 +133,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        redis-version: [4, 5, 6]
+        redis-version: [6, 7]
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.5.0
+      uses: supercharge/redis-github-action@1.6.0
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-container-name: redis-auth-token-cache
@@ -146,7 +146,7 @@ jobs:
 ```
 
 ### Remove container when exit
-Starting v1.6.0, when running this action on a self-hosted runner, it's helpful to remove the container so its name won't conflict:
+Starting in v1.6.0, when running this action on a self-hosted runner, it’s helpful to remove the container so its name won’t conflict:
 
 ```yaml
 name: Run tests
@@ -158,7 +158,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        redis-version: [4, 5, 6]
+        redis-version: [6, 7]
 
     steps:
     - name: Start Redis
