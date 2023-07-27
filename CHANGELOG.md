@@ -1,7 +1,16 @@
 # Changelog
 
 
-## [1.5.0](https://github.com/supercharge/redis-github-action/compare/v1i.4.0...v1.5.0) - 2023-02-14
+## [1.66.0](https://github.com/supercharge/redis-github-action/compare/v1.5.0...v1.66.0) - 2023-07-27
+
+### Added
+- add `redis-remove-container` option adding the `--rm` flag to the resulting `docker run … --rm` command which starts the Redis container
+
+### Updated
+- update versions in README
+
+
+## [1.5.0](https://github.com/supercharge/redis-github-action/compare/v1.4.0...v1.5.0) - 2023-02-14
 
 ### Added
 - use a custom Redis image: useful if you need to run an alternative Redis image like Redis Stack
