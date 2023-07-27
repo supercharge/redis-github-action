@@ -22,6 +22,11 @@ inputs:
     description: "Name of the created container. Useful if you run multiple Redis containers"
     required: false
     default: 'redis'
+  redis-remove-container:
+    description: "Remove container after container exit?"
+    required: false
+    type: boolean
+    default: false
 
 runs:
   using: 'docker'
@@ -31,3 +36,4 @@ runs:
     - ${{ inputs.redis-version }}
     - ${{ inputs.redis-port }}
     - ${{ inputs.redis-container-name }}
+    - ${{ inputs.redis-remove-container }}

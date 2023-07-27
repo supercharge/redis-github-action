@@ -145,6 +145,31 @@ jobs:
     - name: …
 ```
 
+### Remove container when exit
+Starting v1.6.0, when running this action on a self-hosted runner, it's helpful to remove the container so its name won't conflict:
+
+```yaml
+name: Run tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        redis-version: [4, 5, 6]
+
+    steps:
+    - name: Start Redis
+      uses: supercharge/redis-github-action@1.6.0
+      with:
+        redis-version: ${{ matrix.redis-version }}
+        redis-remove-container: true # false by default
+
+    - name: …
+```
+
 
 ## License
 MIT © [Supercharge](https://superchargejs.com)
