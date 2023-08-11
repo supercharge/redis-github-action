@@ -18,6 +18,10 @@ inputs:
     description: 'Redis port to use and expose'
     required: false
     default: 6379
+  redis-password:
+    description: "Redis password to use"
+    required: false
+    default: ''
   redis-container-name:
     description: "Name of the created container. Useful if you run multiple Redis containers"
     required: false
@@ -35,5 +39,6 @@ runs:
     - ${{ inputs.redis-image }}
     - ${{ inputs.redis-version }}
     - ${{ inputs.redis-port }}
+    - ${{ inputs.redis-password }}
     - ${{ inputs.redis-container-name }}
     - ${{ inputs.redis-remove-container }}

@@ -170,6 +170,30 @@ jobs:
     - name: …
 ```
 
+### Using Authentication
+Starting in v1.7.0, You can start the Redis with Authentication using the `redis-password` input:
+
+```yaml
+name: Run tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        redis-version: [6, 7]
+
+    steps:
+    - name: Start Redis
+      uses: supercharge/redis-github-action@1.6.0
+      with:
+        redis-version: ${{ matrix.redis-version }}
+        redis-password: 'password'
+
+    - name: …
+```
 
 ## License
 MIT © [Supercharge](https://superchargejs.com)
