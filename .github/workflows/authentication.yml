@@ -1,0 +1,21 @@
+name: Start Redis server with Authentication
+
+on: [push, pull_request]
+
+jobs:
+  redis-action:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        redis-version: [4, 5, 6]
+
+    name: Start Redis Server v${{ matrix.redis-version }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Start Redis Server
+        uses: ./
+        with:
+          redis-version: ${{ matrix.redis-version }}
+          redis-password: password
