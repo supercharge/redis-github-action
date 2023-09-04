@@ -1,12 +1,13 @@
 # Changelog
 
-## [1.7.0](https://github.com/supercharge/redis-github-action/compare/v1.6.0...v1.7.0) - 2023-08-12
+## [1.7.0](https://github.com/supercharge/redis-github-action/compare/v1.6.0...v1.7.0) - 2023-09-04
 
 ### Added
 - add `redis-password` for start Redis with Authentication
 
 ### Updated
 - update versions in README
+
 
 ## [1.6.0](https://github.com/supercharge/redis-github-action/compare/v1.5.0...v1.6.0) - 2023-07-27
 

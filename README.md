@@ -56,7 +56,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.6.0
+      uses: supercharge/redis-github-action@1.7.0
       with:
         redis-version: ${{ matrix.redis-version }}
 
@@ -85,7 +85,7 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.6.0
+      uses: supercharge/redis-github-action@1.7.0
       with:
         redis-image: redis/redis-stack-server
         redis-version: ${{ matrix.redis-version }}
@@ -111,7 +111,7 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.6.0
+      uses: supercharge/redis-github-action@1.7.0
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-port: 12345
@@ -137,13 +137,14 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.6.0
+      uses: supercharge/redis-github-action@1.7.0
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-container-name: redis-auth-token-cache
 
     - name: …
 ```
+
 
 ### Remove container when exit
 Starting in v1.6.0, when running this action on a self-hosted runner, it’s helpful to remove the container so its name won’t conflict:
@@ -162,13 +163,14 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.6.0
+      uses: supercharge/redis-github-action@1.7.0
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-remove-container: true # false by default
 
     - name: …
 ```
+
 
 ### Using Authentication
 Starting in v1.7.0, You can start the Redis with Authentication using the `redis-password` input:
@@ -187,13 +189,14 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.6.0
+      uses: supercharge/redis-github-action@1.7.0
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-password: 'password'
 
     - name: …
 ```
+
 
 ## License
 MIT © [Supercharge](https://superchargejs.com)
