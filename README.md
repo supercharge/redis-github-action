@@ -31,7 +31,7 @@ This is useful when running tests against a Redis database.
 
 
 ## Usage
-A code example says more than a 1000 words. Here’s an exemplary GitHub Action using a Redis server in versions 4 and 5 to test a Node.js app:
+A code example says more than 1,000 words. Here’s an exemplary GitHub Action using a Redis server in versions 4 and 5 to test a Node.js app:
 
 ```yaml
 name: Run tests
@@ -48,10 +48,10 @@ jobs:
 
     steps:
     - name: Git checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
 
