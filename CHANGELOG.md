@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.7.1](https://github.com/supercharge/redis-github-action/compare/v1.7.0...v1.7.1) - 2023-12-12
+## [1.8.0](https://github.com/supercharge/redis-github-action/compare/v1.7.0...v1.8.0) - 2023-12-12
 
 ### Added
 - add Redis 7 to testing
