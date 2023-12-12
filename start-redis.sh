@@ -15,12 +15,12 @@ fi
 
 DOCKER_RUN_ARGS="--name $REDIS_CONTAINER_NAME --publish $REDIS_PORT:6379 --detach $REDIS_IMAGE:$REDIS_VERSION"
 
-if [ -n "$REDIS_PASSWORD" ]; then
-  DOCKER_RUN_ARGS="$DOCKER_RUN_ARGS redis-server --requirepass $REDIS_PASSWORD"
-fi
-
 if [ "$REDIS_REMOVE_CONTAINER" == "true" ]; then
   DOCKER_RUN_ARGS="$DOCKER_RUN_ARGS --rm"
+fi
+
+if [ -n "$REDIS_PASSWORD" ]; then
+  DOCKER_RUN_ARGS="$DOCKER_RUN_ARGS redis-server --requirepass $REDIS_PASSWORD"
 fi
 
 echo "Starting single-node Redis instance: $DOCKER_RUN_ARGS"
