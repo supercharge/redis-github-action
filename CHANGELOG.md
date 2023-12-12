@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.7.1](https://github.com/supercharge/redis-github-action/compare/v1.7.0...v1.7.1) - 2023-12-12
+
+### Added
+- add Redis 7 to testing
+
+### Updated
+- bump GitHub Actions service `actions/checkout` to version `v4`
+
+### Removed
+- remove Redis 4 from testing
+
+### Fixed
+- fix position of adding the Docker `--rm` flag to be added before starting the Redis server, because the `--rm` flag would be passed to the Redis server instead of Docker
+
+
 ## [1.7.0](https://github.com/supercharge/redis-github-action/compare/v1.6.0...v1.7.0) - 2023-09-04
 
 ### Added
