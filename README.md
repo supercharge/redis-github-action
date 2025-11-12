@@ -56,7 +56,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.7.0
+      uses: supercharge/redis-github-action@1.8.1
       with:
         redis-version: ${{ matrix.redis-version }}
 
@@ -85,7 +85,7 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.7.0
+      uses: supercharge/redis-github-action@1.8.1
       with:
         redis-image: redis/redis-stack-server
         redis-version: ${{ matrix.redis-version }}
@@ -111,7 +111,7 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.7.0
+      uses: supercharge/redis-github-action@1.8.1
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-port: 12345
@@ -137,7 +137,7 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.7.0
+      uses: supercharge/redis-github-action@1.8.1
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-container-name: redis-auth-token-cache
@@ -163,7 +163,7 @@ jobs:
 
     steps:
     - name: Start Redis
-      uses: supercharge/redis-github-action@1.7.0
+      uses: supercharge/redis-github-action@1.8.1
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-password: 'password'

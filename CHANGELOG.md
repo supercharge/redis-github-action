@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.8.1](https://github.com/supercharge/redis-github-action/compare/v1.8.0...v1.8.1) - 2025-11-12
+
+### Fixed
+- change Docker tag from `docker:stable` to `docker:latest`
+
+
 ## [1.8.0](https://github.com/supercharge/redis-github-action/compare/v1.7.0...v1.8.0) - 2023-12-12
 
 ### Added
