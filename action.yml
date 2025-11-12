@@ -17,7 +17,7 @@ inputs:
   redis-port:
     description: 'Redis port to use and expose'
     required: false
-    default: 6379
+    default: "6379"
   redis-password:
     description: "Redis password to use"
     required: false
@@ -26,11 +26,11 @@ inputs:
     description: "Name of the created container. Useful if you run multiple Redis containers"
     required: false
     default: 'redis'
-  redis-remove-container:
+  redis-remove-container-on-exit:
     description: "Remove container after container exit?"
     required: false
     type: boolean
-    default: false
+    default: "false"
 
 runs:
   using: 'docker'
@@ -41,4 +41,4 @@ runs:
     - ${{ inputs.redis-port }}
     - ${{ inputs.redis-password }}
     - ${{ inputs.redis-container-name }}
-    - ${{ inputs.redis-remove-container }}
+    - ${{ inputs.redis-remove-container-on-exit }}
