@@ -1,5 +1,29 @@
 # Changelog
 
+## [2.0.0](https://github.com/supercharge/redis-github-action/compare/v1.8.1...v2.0.0) - not released
+
+### Breaking Changes
+- we renamed the `redis-remove-container` flag to `redis-remove-container-on-exit`
+  ```yaml
+  # BEFORE
+  steps:
+  - name: Start Redis
+    uses: supercharge/redis-github-action@1.8.1
+    with:
+      redis-version: ${{ matrix.redis-version }}
+      redis-remove-container: true # false by default
+
+  # AFTER
+  steps:
+  - name: Start Redis
+    uses: supercharge/redis-github-action@2.0.0
+    with:
+      redis-version: ${{ matrix.redis-version }}
+      redis-remove-container-on-exit: true # false by default
+  ```
+
+
+
 ## [1.8.1](https://github.com/supercharge/redis-github-action/compare/v1.8.0...v1.8.1) - 2025-11-12
 
 ### Fixed

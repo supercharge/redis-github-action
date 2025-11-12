@@ -29,7 +29,6 @@ inputs:
   redis-remove-container-on-exit:
     description: "Remove container after container exit?"
     required: false
-    type: boolean
     default: "false"
 
 runs:
