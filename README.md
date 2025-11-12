@@ -146,32 +146,6 @@ jobs:
 ```
 
 
-### Remove container when exit
-Starting in v1.6.0, when running this action on a self-hosted runner, it’s helpful to remove the container so its name won’t conflict:
-
-```yaml
-name: Run tests
-
-on: [push]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        redis-version: [6, 7]
-
-    steps:
-    - name: Start Redis
-      uses: supercharge/redis-github-action@1.7.0
-      with:
-        redis-version: ${{ matrix.redis-version }}
-        redis-remove-container: true # false by default
-
-    - name: …
-```
-
-
 ### Using Authentication
 Starting in v1.7.0, You can start the Redis with Authentication using the `redis-password` input:
 
@@ -193,6 +167,32 @@ jobs:
       with:
         redis-version: ${{ matrix.redis-version }}
         redis-password: 'password'
+
+    - name: …
+```
+
+
+### Remove Docker Container on Exit
+Starting in v1.9.0, when running this action on a self-hosted runner, it’s helpful to remove the container so its name won’t conflict:
+
+```yaml
+name: Run tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        redis-version: [6, 7]
+
+    steps:
+    - name: Start Redis
+      uses: supercharge/redis-github-action@1.7.0
+      with:
+        redis-version: ${{ matrix.redis-version }}
+        redis-remove-container-on-exit: true # false by default
 
     - name: …
 ```
